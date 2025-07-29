@@ -9,13 +9,16 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
-  devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false,
+  devtool: process.env.NODE_ENV === 'development' ? 'eval-cheap-module-source-map' : false,
   devServer: {
     static: {
       directory: path.join(__dirname, '.'),
     },
     port: 3000,
     open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlPlugin({
@@ -27,12 +30,21 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
+        use: [
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: 2,
+            },
           },
-        },
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              cacheDirectory: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
@@ -40,7 +52,17 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'thread-loader',
+            options: {
+              workers: 2,
+            },
+          },
+          'sass-loader'
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,

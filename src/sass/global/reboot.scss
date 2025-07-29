@@ -1,5 +1,5 @@
-@use "../variables" as *;
-@use "../mixins" as *;
+@use "../global/variables" as *;
+@use "../global/mixins" as *;
 
 *,
 *::before,
@@ -25,7 +25,7 @@ html {
   font-size: $fz-default;
   line-height: 120%;
   font-family: "Arial", sans-serif;
-  color: $color-chambray;
+  color: $color-default-black;
   overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;

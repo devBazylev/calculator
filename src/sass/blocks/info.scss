@@ -28,7 +28,7 @@
     display: flex;
     gap: 10px;
     width: fit-content;
-    padding: 15px;
+    padding: 15px 15px 5px;
   }
 
   &__circle {
@@ -51,10 +51,10 @@
   }
 
   &__display {
-    font-size: 60px;
-    line-height: 120%;
+    font-size: 70px;
+    line-height: 100%;
     text-align: right;
-    padding: 20px;
+    padding: 10px 20px;
   }
 
   &__keyboard {

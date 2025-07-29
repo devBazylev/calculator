@@ -10,17 +10,20 @@ module.exports = {
     clean: true,
   },
   devtool: 'source-map',
+  devServer: {
+    static: {
+      directory: path.join(__dirname, '.'),
+    },
+  },
   plugins: [
     new HtmlPlugin({
-      template: 'public/index.html',
+      template: 'index.html',
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: 'public',
-          globOptions: {
-            ignore: ['**/index.html'],
-          },
+          from: 'favicon.ico',
+          to: 'favicon.ico',
         },
       ],
     }),
@@ -40,6 +43,10 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
     ]
   }

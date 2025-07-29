@@ -1,4 +1,5 @@
-import {initInfo} from 'src/js/modules/info';
+import './sass/style.scss';
+import {initInfo} from './js/modules/info';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';

@@ -23,6 +23,8 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       template: 'index.html',
+      inject: 'body',
+      scriptLoading: 'blocking',
     }),
   ],
   module: {

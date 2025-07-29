@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false,
   devServer: {
     static: {
       directory: path.join(__dirname, '.'),
@@ -18,14 +18,6 @@ module.exports = {
   plugins: [
     new HtmlPlugin({
       template: 'index.html',
-    }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: 'favicon.ico',
-          to: 'favicon.ico',
-        },
-      ],
     }),
   ],
   module: {
@@ -47,6 +39,14 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/inline',
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: 'asset/inline',
       },
     ]
   }

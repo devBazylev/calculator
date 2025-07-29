@@ -14,6 +14,8 @@ module.exports = {
     static: {
       directory: path.join(__dirname, '.'),
     },
+    port: 3000,
+    open: true,
   },
   plugins: [
     new HtmlPlugin({

@@ -1,45 +1,26 @@
-# Calculator Project
+## https://devbazylev.github.io/innowise/
 
-A calculator project built using modern technology stack.
+# Instruction
 
-## 🚀 Technologies
-
-- **JavaScript (ES6+)**
-- **Webpack 5**
-- **Sass/SCSS**
-- **Babel**
-- **HTML5**
-
-## 📦 Installation
-
-1. Clone the repository:
+1. Task:
 ```bash
-git clone https://github.com/your-username/calculator.git
+https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit?tab=t.0
+```
+
+2. How to run the app:
+
+```bash
+git clone https://github.com:your-username/innowise.git
 cd calculator
 ```
 
-2. Install dependencies:
 ```bash
 npm install
 ```
 
-## 🛠️ Development
-
-To run in development mode:
 ```bash
 npm run dev
 ```
-
-The application will be available at: http://localhost:3000
-
-## 🏗️ Build
-
-To create a production build:
-```bash
-npm run build
-```
-
-Built files will be in the `build/` folder.
 
 ## 📝 Scripts
 
@@ -47,10 +28,6 @@ Built files will be in the `build/` folder.
 - `npm run start` - Run in development mode
 - `npm run build` - Create production build
 - `npm run lint` - Check code with ESLint
-
-## 🌐 Deployment
-
-The project is automatically deployed to GitHub Pages when pushing to the `main` or `master` branch.
 
 ## 📁 Project Structure
 

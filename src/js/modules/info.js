@@ -6,6 +6,7 @@ const initInfo = () => {
     return;
   }
   const xxx = info.querySelector('.info__block');
+  console.log(xxx);
 };
 
 export { initInfo };

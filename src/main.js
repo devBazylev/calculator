@@ -1,4 +1,4 @@
-import {initInfo} from './modules/info';
+import {initInfo} from 'src/js/modules/info';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';

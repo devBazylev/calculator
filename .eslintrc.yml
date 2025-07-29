@@ -5,5 +5,3 @@ parserOptions:
 env:
   es2022: true
   browser: true
-
-extends: 'htmlacademy/vanilla'

@@ -16,6 +16,35 @@ $color-dark-goldenrod:                     #cc7f08;
 $color-sunset:                             #cc4c46;
 $color-nugget:                             #cb9625;
 $color-forest-green:                       #20a033;
+$theme-nero:                               #1a1a1a;
+$theme-white-smoke:                        #f5f5f5;
+$theme-white-smoke-alt:                    #f8f8f8;
+$theme-night-rider:                        #333333;
+$theme-gainsboro:                          #e0e0e0;
+$theme-very-light-grey:                    #cccccc;
+$theme-dark-orange:                        #ff9500;
+
+// Theme colors
+$theme-background:                         $theme-nero;
+$theme-calc-bg:                            $color-charcoal;
+$theme-display-bg:                         $color-charcoal;
+$theme-text-color:                         $color-silver;
+$theme-btn-bg:                             $color-dim-gray;
+$theme-btn-dark:                           $color-matterhorn;
+$theme-btn-light:                          $color-dark-goldenrod;
+$theme-btn-text:                           $color-silver;
+$theme-shadow:                             rgba(0, 0, 0, 0.3);
+
+// Light theme colors
+$theme-light-background:                   $theme-white-smoke;
+$theme-light-calc-bg:                      $color-default-white;
+$theme-light-display-bg:                   $theme-white-smoke-alt;
+$theme-light-text-color:                   $theme-night-rider;
+$theme-light-btn-bg:                       $theme-gainsboro;
+$theme-light-btn-dark:                     $theme-very-light-grey;
+$theme-light-btn-light:                    $theme-dark-orange;
+$theme-light-btn-text:                     $theme-night-rider;
+$theme-light-shadow:                       rgba(0, 0, 0, 0.1);
 
 // Project transparent palette
 

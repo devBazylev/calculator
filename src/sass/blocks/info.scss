@@ -6,11 +6,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $color-silver;
+  color: $theme-text-color;
+  background-color: $theme-background;
+  min-height: 100vh;
+  transition: all $trans-default;
+
+  &--light {
+    color: $theme-light-text-color;
+    background-color: $theme-light-background;
+  }
 
   &__title {
     font-size: 40px;
     line-height: 120%;
+  }
+
+  &__toggler {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $theme-text-color;
+    transition: all $trans-default;
+    overflow: hidden;
+    cursor: pointer;
+    background: linear-gradient(45deg, $theme-nero, $color-charcoal);
+    border-color: $theme-btn-light;
+    box-shadow: 0 0 10px $theme-btn-light;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--light &__toggler {
+    background: linear-gradient(45deg, $theme-white-smoke, $color-default-white);
+    border-color: $theme-light-text-color;
+    border-color: $theme-light-btn-light;
+    box-shadow: 0 0 10px $theme-light-btn-light;
   }
 
   &__calc {
@@ -18,10 +53,18 @@
     height: fit-content;
     border-radius: 20px;
     overflow: hidden;
-    background-color: $color-charcoal;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-             0 20px 40px rgba(0, 0, 0, 0.3),
-             0 30px 60px rgba(0, 0, 0, 0.4);
+    background-color: $theme-calc-bg;
+    box-shadow: 0 10px 20px $theme-shadow,
+             0 20px 40px $theme-shadow,
+             0 30px 60px $theme-shadow;
+    transition: all $trans-default;
+  }
+
+  &--light &__calc {
+    background-color: $theme-light-calc-bg;
+    box-shadow: 0 10px 20px $theme-light-shadow,
+             0 20px 40px $theme-light-shadow,
+             0 30px 60px $theme-light-shadow;
   }
 
   &__decor {
@@ -55,6 +98,14 @@
     line-height: 100%;
     text-align: right;
     padding: 10px 20px;
+    background-color: $theme-display-bg;
+    color: $theme-text-color;
+    transition: all $trans-default;
+  }
+
+  &--light &__display {
+    background-color: $theme-light-display-bg;
+    color: $theme-light-text-color;
   }
 
   &__keyboard {
@@ -69,16 +120,29 @@
     height: 100%;
     font-size: 30px;
     line-height: 120%;
-    color: $color-silver;
-    background-color: $color-dim-gray;
+    color: $theme-btn-text;
+    background-color: $theme-btn-bg;
+  }
+
+  &--light &__btn {
+    color: $theme-light-btn-text;
+    background-color: $theme-light-btn-bg;
   }
 
   &__btn--dark {
-    background-color: $color-matterhorn;
+    background-color: $theme-btn-dark;
+  }
+
+  &--light &__btn--dark {
+    background-color: $theme-light-btn-dark;
   }
 
   &__btn--light {
-    background-color: $color-dark-goldenrod;
+    background-color: $theme-btn-light;
+  }
+
+  &--light &__btn--light {
+    background-color: $theme-light-btn-light;
   }
 
   &__btn--large {

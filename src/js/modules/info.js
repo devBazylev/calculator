@@ -2,11 +2,22 @@
 
 const initInfo = () => {
   const info = document.querySelector('.info');
+  const toggler = info.querySelector('.info__toggler');
+
   if (!info) {
     return;
   }
-  const xxx = info.querySelector('.info__block');
-  console.log(xxx);
+
+  const toggleTheme = () => {
+    info.classList.toggle('info--light');
+  };
+
+  const onToggler = () => {
+    toggleTheme();
+  };
+
+  toggler.addEventListener('click', onToggler);
+  // console.log(theme);
 };
 
 export { initInfo };

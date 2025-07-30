@@ -13,10 +13,6 @@ extends:
 plugins:
   - prettier
 
-ignorePatterns:
-  - 'src/sass/**/*.scss'
-  - 'src/**/*.scss'
-
 rules:
   # Prettier
   'prettier/prettier': 'error'
@@ -33,3 +29,6 @@ rules:
   # Функции
   'func-style': ['error', 'expression']
   'prefer-arrow-callback': 'error'
+
+  # Игнорировать @ директивы в SCSS
+  'no-unused-expressions': 'off'

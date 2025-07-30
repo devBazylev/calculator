@@ -82,7 +82,29 @@ const initInfo = () => {
 
   const onPercent = () => {
     const num = parseFloat(currentValue);
-    currentValue = (num / 100).toString();
+
+    if (operation && previousValue) {
+      const prev = parseFloat(previousValue);
+      let result;
+
+      switch (operation) {
+        case '+':
+        case '-':
+          result = prev * (num / 100);
+          break;
+        case '*':
+        case '/':
+          result = num / 100;
+          break;
+        default:
+          result = num / 100;
+      }
+
+      currentValue = result.toString();
+    } else {
+      currentValue = (num / 100).toString();
+    }
+
     updateDisplay();
   };
 

@@ -1,11 +1,11 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 @mixin font($font_name, $file_name, $weight: 400, $style: normal) {
   @font-face {
     font-family: #{$font_name};
     font-style: #{$style};
     font-weight: #{$weight};
-    src: url("../fonts/#{$file_name}.woff2") format("woff2");
+    src: url('../fonts/#{$file_name}.woff2') format('woff2');
     font-display: swap;
   }
 }
@@ -92,14 +92,14 @@
   }
 }
 
-@mixin pse($content: "", $display: block) {
+@mixin pse($content: '', $display: block) {
   content: $content;
   display: $display;
 
   @content;
 }
 
-@mixin svg($name: null, $type: "background", $color: null) {
+@mixin svg($name: null, $type: 'background', $color: null) {
   @include pse;
 
   #{$type}-repeat: no-repeat;
@@ -107,7 +107,7 @@
   #{$type}-size: contain;
 
   @if $name != null {
-    #{$type}-image: url("../img/svg/#{$name}.svg");
+    #{$type}-image: url('../img/svg/#{$name}.svg');
   }
 
   @if $color {

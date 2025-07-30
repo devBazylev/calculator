@@ -1,5 +1,5 @@
-@use "../global/variables" as *;
-@use "../global/mixins" as *;
+@use '../global/variables' as *;
+@use '../global/mixins' as *;
 
 *,
 *::before,
@@ -24,7 +24,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 120%;
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   color: $color-default-black;
   overflow-x: hidden;
 
@@ -90,10 +90,10 @@ input {
   }
 }
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
   appearance: none;
 }
 
@@ -104,25 +104,27 @@ input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-input[type="number"] {
+input[type='number'] {
   appearance: textfield;
 }
 
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches(
+  [type='email'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='url']
+) {
   appearance: none;
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   appearance: none;
 }

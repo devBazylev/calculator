@@ -1,4 +1,4 @@
-@use "../global/variables.scss" as *;
+@use '../global/variables.scss' as *;
 
 .info {
   position: relative;
@@ -42,7 +42,11 @@
   }
 
   &--light &__toggler {
-    background: linear-gradient(45deg, $theme-white-smoke, $color-default-white);
+    background: linear-gradient(
+      45deg,
+      $theme-white-smoke,
+      $color-default-white
+    );
     border-color: $theme-light-text-color;
     border-color: $theme-light-btn-light;
     box-shadow: 0 0 10px $theme-light-btn-light;
@@ -54,17 +58,19 @@
     border-radius: 20px;
     overflow: hidden;
     background-color: $theme-calc-bg;
-    box-shadow: 0 10px 20px $theme-shadow,
-             0 20px 40px $theme-shadow,
-             0 30px 60px $theme-shadow;
+    box-shadow:
+      0 10px 20px $theme-shadow,
+      0 20px 40px $theme-shadow,
+      0 30px 60px $theme-shadow;
     transition: all $trans-default;
   }
 
   &--light &__calc {
     background-color: $theme-light-calc-bg;
-    box-shadow: 0 10px 20px $theme-light-shadow,
-             0 20px 40px $theme-light-shadow,
-             0 30px 60px $theme-light-shadow;
+    box-shadow:
+      0 10px 20px $theme-light-shadow,
+      0 20px 40px $theme-light-shadow,
+      0 30px 60px $theme-light-shadow;
   }
 
   &__decor {

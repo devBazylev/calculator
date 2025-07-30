@@ -1,5 +1,5 @@
 import './sass/style.scss';
-import {initInfo} from './js/modules/info';
+import { initInfo } from './js/modules/info';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';
@@ -10,7 +10,5 @@ window.addEventListener('DOMContentLoaded', () => {
     initInfo();
   }
 
-  window.addEventListener('load', () => {
-
-  });
+  window.addEventListener('load', () => {});
 });

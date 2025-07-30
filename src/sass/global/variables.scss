@@ -2,79 +2,79 @@
 
 // Default
 
-$color-default-black:                      #000000;
-$color-default-white:                      #ffffff;
-$color-transparent:                        rgba(255, 255, 255, 0);
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
 
-$color-silver:                             #b9b9b9;
-$color-charcoal:                           #424242;
-$color-matterhorn:                         #505050;
-$color-dim-gray:                           #646464;
-$color-dark-goldenrod:                     #cc7f08;
-$color-sunset:                             #cc4c46;
-$color-nugget:                             #cb9625;
-$color-forest-green:                       #20a033;
-$theme-nero:                               #1a1a1a;
-$theme-white-smoke:                        #f5f5f5;
-$theme-white-smoke-alt:                    #f8f8f8;
-$theme-night-rider:                        #333333;
-$theme-gainsboro:                          #e0e0e0;
-$theme-very-light-grey:                    #cccccc;
-$theme-dark-orange:                        #ff9500;
+$color-silver: #b9b9b9;
+$color-charcoal: #424242;
+$color-matterhorn: #505050;
+$color-dim-gray: #646464;
+$color-dark-goldenrod: #cc7f08;
+$color-sunset: #cc4c46;
+$color-nugget: #cb9625;
+$color-forest-green: #20a033;
+$theme-nero: #1a1a1a;
+$theme-white-smoke: #f5f5f5;
+$theme-white-smoke-alt: #f8f8f8;
+$theme-night-rider: #333333;
+$theme-gainsboro: #e0e0e0;
+$theme-very-light-grey: #cccccc;
+$theme-dark-orange: #ff9500;
 
 // Theme colors
-$theme-background:                         $theme-nero;
-$theme-calc-bg:                            $color-charcoal;
-$theme-display-bg:                         $color-charcoal;
-$theme-text-color:                         $color-silver;
-$theme-btn-bg:                             $color-dim-gray;
-$theme-btn-dark:                           $color-matterhorn;
-$theme-btn-light:                          $color-dark-goldenrod;
-$theme-btn-text:                           $color-silver;
-$theme-shadow:                             rgba(0, 0, 0, 0.3);
+$theme-background: $theme-nero;
+$theme-calc-bg: $color-charcoal;
+$theme-display-bg: $color-charcoal;
+$theme-text-color: $color-silver;
+$theme-btn-bg: $color-dim-gray;
+$theme-btn-dark: $color-matterhorn;
+$theme-btn-light: $color-dark-goldenrod;
+$theme-btn-text: $color-silver;
+$theme-shadow: rgba(0, 0, 0, 0.3);
 
 // Light theme colors
-$theme-light-background:                   $theme-white-smoke;
-$theme-light-calc-bg:                      $color-default-white;
-$theme-light-display-bg:                   $theme-white-smoke-alt;
-$theme-light-text-color:                   $theme-night-rider;
-$theme-light-btn-bg:                       $theme-gainsboro;
-$theme-light-btn-dark:                     $theme-very-light-grey;
-$theme-light-btn-light:                    $theme-dark-orange;
-$theme-light-btn-text:                     $theme-night-rider;
-$theme-light-shadow:                       rgba(0, 0, 0, 0.1);
+$theme-light-background: $theme-white-smoke;
+$theme-light-calc-bg: $color-default-white;
+$theme-light-display-bg: $theme-white-smoke-alt;
+$theme-light-text-color: $theme-night-rider;
+$theme-light-btn-bg: $theme-gainsboro;
+$theme-light-btn-dark: $theme-very-light-grey;
+$theme-light-btn-light: $theme-dark-orange;
+$theme-light-btn-text: $theme-night-rider;
+$theme-light-shadow: rgba(0, 0, 0, 0.1);
 
 // Project transparent palette
 
-$color-chambray-trans-10:                  rgba(66, 86, 122, 0.1);
+$color-chambray-trans-10: rgba(66, 86, 122, 0.1);
 
 // Typography
 
-$fz-default:                               16px;
-$ff-rouble:                                "Rouble", "Arial", sans-serif;
-$ff-placeholder:                           "Placeholder", "Arial", sans-serif;
-$ff-ptsans:                                "PTSans", "Arial", sans-serif;
+$fz-default: 16px;
+$ff-rouble: 'Rouble', 'Arial', sans-serif;
+$ff-placeholder: 'Placeholder', 'Arial', sans-serif;
+$ff-ptsans: 'PTSans', 'Arial', sans-serif;
 
 // Animation
 
-$tf-default:                               ease;
-$trans-default:                            0.3s $tf-default;
-$trans-1000:                               1s $tf-default;
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$trans-1000: 1s $tf-default;
 
 // Viewports
 
-$vp-320:                                   320px;
-$vp-375:                                   375px;
-$vp-500:                                   500px;
-$vp-768:                                   768px;
-$vp-1024:                                  1024px;
-$vp-1280:                                  1280px;
-$vp-1440:                                  1440px;
-$vp-1920:                                  1920px;
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-500: 500px;
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1920: 1920px;
 
 // Retina
 
-$retina-dpi:                               144dpi;
-$retina-dppx:                              1.5dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

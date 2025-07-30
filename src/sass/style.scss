@@ -1,12 +1,12 @@
 // Global
 
-@use "global/variables";
-@use "global/mixins";
-@use "global/fonts.scss";
-@use "global/reboot";
-@use "global/utils";
+@use 'global/variables';
+@use 'global/mixins';
+@use 'global/fonts.scss';
+@use 'global/reboot';
+@use 'global/utils';
 
 // Blocks
 
-@use "blocks/btn";
-@use "blocks/info";
+@use 'blocks/btn';
+@use 'blocks/info';

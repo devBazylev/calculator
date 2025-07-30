@@ -94,6 +94,10 @@
   }
 
   &__display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 90px;
     font-size: 70px;
     line-height: 100%;
     text-align: right;
@@ -101,6 +105,9 @@
     background-color: $theme-display-bg;
     color: $theme-text-color;
     transition: all $trans-default;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word;
   }
 
   &--light &__display {

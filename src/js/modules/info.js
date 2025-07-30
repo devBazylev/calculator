@@ -1,6 +1,7 @@
 const initInfo = () => {
   const info = document.querySelector('.info');
   const display = info.querySelector('.info__display');
+  const toggler = info.querySelector('.info__toggler');
   const keyboard = info.querySelector('.info__keyboard');
   const reset = keyboard.querySelector('.info__btn--reset');
   const swap = keyboard.querySelector('.info__btn--swap');
@@ -19,8 +20,42 @@ const initInfo = () => {
     return;
   }
 
+  const toggleTheme = () => {
+    info.classList.toggle('info--light');
+  };
+
+  const onToggler = () => {
+    toggleTheme();
+  };
+
   const updateDisplay = () => {
     display.textContent = currentValue;
+
+    if (currentValue.length > 20) {
+      currentValue = currentValue.slice(0, 20);
+      display.textContent = currentValue;
+    }
+
+    adjustFontSize();
+  };
+
+  const adjustFontSize = () => {
+    const baseFontSize = 70;
+    const minFontSize = 25;
+
+    const length = currentValue.length;
+
+    if (length <= 6) {
+      display.style.fontSize = `${baseFontSize}px`;
+    } else if (length <= 8) {
+      display.style.fontSize = `${baseFontSize - 10}px`;
+    } else if (length <= 10) {
+      display.style.fontSize = `${baseFontSize - 20}px`;
+    } else if (length <= 12) {
+      display.style.fontSize = `${baseFontSize - 30}px`;
+    } else {
+      display.style.fontSize = `${minFontSize}px`;
+    }
   };
 
   const resetCalculator = () => {
@@ -28,6 +63,7 @@ const initInfo = () => {
     previousValue = null;
     operation = null;
     shouldResetDisplay = false;
+    display.style.fontSize = '70px';
     updateDisplay();
   };
 
@@ -123,6 +159,7 @@ const initInfo = () => {
     }
   };
 
+  toggler.addEventListener('click', onToggler);
   reset.addEventListener('click', onReset);
   swap.addEventListener('click', onSwap);
   percent.addEventListener('click', onPercent);

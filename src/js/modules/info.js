@@ -130,20 +130,20 @@ const initInfo = () => {
     let result;
 
     switch (operation) {
-      case '+':
-        result = prev + current;
-        break;
-      case '-':
-        result = prev - current;
-        break;
-      case '*':
-        result = prev * current;
-        break;
-      case '/':
-        result = prev / current;
-        break;
-      default:
-        return;
+    case '+':
+      result = prev + current;
+      break;
+    case '-':
+      result = prev - current;
+      break;
+    case '*':
+      result = prev * current;
+      break;
+    case '/':
+      result = prev / current;
+      break;
+    default:
+      return;
     }
 
     currentValue = result.toString();
@@ -165,8 +165,8 @@ const initInfo = () => {
   percent.addEventListener('click', onPercent);
   result.addEventListener('click', onResult);
   dot.addEventListener('click', onDot);
-  nums.forEach(num => num.addEventListener('click', onNum));
-  actions.forEach(action => action.addEventListener('click', onAction));
+  nums.forEach((num) => num.addEventListener('click', onNum));
+  actions.forEach((action) => action.addEventListener('click', onAction));
 };
 
 export { initInfo };

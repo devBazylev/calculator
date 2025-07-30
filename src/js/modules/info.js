@@ -100,9 +100,18 @@ const initInfo = () => {
           result = num / 100;
       }
 
-      currentValue = result.toString();
+      if (!isFinite(result) || isNaN(result)) {
+        currentValue = 'Error';
+      } else {
+        currentValue = result.toString();
+      }
     } else {
-      currentValue = (num / 100).toString();
+      const result = num / 100;
+      if (!isFinite(result) || isNaN(result)) {
+        currentValue = 'Error';
+      } else {
+        currentValue = result.toString();
+      }
     }
 
     updateDisplay();
@@ -162,13 +171,25 @@ const initInfo = () => {
         result = prev * current;
         break;
       case '/':
+        if (current === 0) {
+          currentValue = 'Error';
+          operation = null;
+          previousValue = null;
+          updateDisplay();
+          return;
+        }
         result = prev / current;
         break;
       default:
         return;
     }
 
-    currentValue = result.toString();
+    if (!isFinite(result) || isNaN(result)) {
+      currentValue = 'Error';
+    } else {
+      currentValue = result.toString();
+    }
+
     operation = null;
     previousValue = null;
     updateDisplay();

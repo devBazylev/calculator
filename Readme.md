@@ -42,14 +42,12 @@ src/
 ├── js/
 │   ├── modules/
 │   │   ├── info.js          # Calculator logic
-│   │   └── header.js        # Theme management
 │   └── utils/
 │       └── util.js          # Utility functions
 ├── sass/
 │   ├── blocks/
 │   │   ├── btn.scss         # Button styles
 │   │   ├── info.scss        # Calculator styles
-│   │   └── header.scss      # Header styles
 │   ├── global/
 │   │   ├── variables.scss   # SCSS variables
 │   │   ├── mixins.scss      # SCSS mixins

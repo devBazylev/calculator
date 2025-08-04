@@ -1,4 +1,4 @@
-## https://devbazylev.github.io/innowise/
+## https://devbazylev.github.io/calculator/
 
 # Instruction
 
@@ -10,7 +10,7 @@ https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/
 2. How to run the app:
 
 ```bash
-git clone https://github.com:your-username/innowise.git
+git clone https://github.com:your-username/calculator.git
 cd calculator
 ```
 

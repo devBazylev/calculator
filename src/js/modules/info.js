@@ -172,7 +172,7 @@ const initInfo = () => {
         break;
       case '/':
         if (current === 0) {
-          currentValue = '0';
+          currentValue = 'Error';
           operation = null;
           previousValue = null;
           updateDisplay();
